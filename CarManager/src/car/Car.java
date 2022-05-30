@@ -76,3 +76,4 @@ public class Car implements Serializable{
         return "Car{" + "id=" + id + ", name=" + name + ", brand=" + brand + ", year=" + year + ", amount=" + amount + ", cost=" + cost + '}';
     }
 }
+//check30/5/2022
