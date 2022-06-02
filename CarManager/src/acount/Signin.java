@@ -5,7 +5,6 @@
 package acount;
 
 import car.CarManager;
-import java.awt.Cursor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -45,49 +44,37 @@ public class Signin extends javax.swing.JFrame {
         btSingin = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
         btSignup = new javax.swing.JButton();
-        lbQuenMK = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign In");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Sign In");
+        jLabel1.setText("Đăng nhập");
 
-        jLabel2.setText("   Username:");
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("Tên đăng nhập:");
 
-        jLabel3.setText("   Password:");
+        jLabel3.setText("Mật khẩu:");
 
-        btExit.setText("Exit");
+        btExit.setText("Thoát");
         btExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btExitActionPerformed(evt);
             }
         });
 
-        btSingin.setText("Sign in");
+        btSingin.setText("Đăng nhập");
         btSingin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btSinginActionPerformed(evt);
             }
         });
 
-        btSignup.setText("Sign up");
+        btSignup.setText("Đăng ký");
         btSignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btSignupActionPerformed(evt);
-            }
-        });
-
-        lbQuenMK.setText("Forgot password");
-        lbQuenMK.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                lbQuenMKMouseMoved(evt);
-            }
-        });
-        lbQuenMK.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lbQuenMKMouseClicked(evt);
             }
         });
 
@@ -96,29 +83,25 @@ public class Signin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                                .addComponent(password))
+                            .addGap(0, 8, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 16, Short.MAX_VALUE)
-                        .addComponent(btSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btSingin, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btExit, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(lbQuenMK)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(username)
-                            .addComponent(password))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addComponent(btSingin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btExit, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,9 +116,7 @@ public class Signin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbQuenMK)
-                .addGap(18, 18, 18)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btSingin)
                     .addComponent(btExit)
@@ -160,17 +141,17 @@ public class Signin extends javax.swing.JFrame {
         String name = username.getText();
         String pass = String.valueOf(password.getPassword());
         if ("".equals(name)) {
-            sb.append("Usename is not null!\n");
+            sb.append("Tên đăng nhập không được để trống!\n");
         }
         if ("".equals(pass)) {
-            sb.append("Password is not null!\n");
+            sb.append("Mật khẩu không được để trống!\n");
         }
 
         if (!sb.isEmpty()) {
             JOptionPane.showMessageDialog(this, sb);
             return;
         }
-        
+
         // lay du lieu account
         try {
             list.loadFile();
@@ -180,25 +161,25 @@ public class Signin extends javax.swing.JFrame {
 
         // kiem tra tk co ton tai ko
         if (!list.checkName(name)) {
-            sb.append("Account does not exist!");
+            sb.append("Tài khoản không tồn tại!");
         } else if (!list.checkPass(pass)) {
-            sb.append("Incorrect password!");
+            sb.append("Sai mật khẩu!");
         }
         if (!sb.isEmpty()) {
             JOptionPane.showMessageDialog(this, sb);
             return;
         }
-        
+
         // kiem tra tk da duoc kich hoat chua
         Account account = list.findByName(name);
-        if(account.getType()==0){
-            sb.append("The account is not activated, please request access from admin!");
+        if (account.getType() == 0) {
+            sb.append("Tài khoản chưa được kich hoạt.\nHãy yêu cầu quyền truy cập từ người quản trị!");
         }
         if (!sb.isEmpty()) {
             JOptionPane.showMessageDialog(this, sb);
             return;
         }
-        
+
         CarManager car = new CarManager(account.getType());
         car.setVisible(true);
 
@@ -207,20 +188,9 @@ public class Signin extends javax.swing.JFrame {
 
     private void btSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSignupActionPerformed
         // TODO add your handling code here:
-        Signup car = new Signup(0);
-        car.setVisible(true);
+        new Signup().setVisible(true);
 
     }//GEN-LAST:event_btSignupActionPerformed
-
-    private void lbQuenMKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbQuenMKMouseClicked
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Xay dung sau");
-    }//GEN-LAST:event_lbQuenMKMouseClicked
-
-    private void lbQuenMKMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbQuenMKMouseMoved
-        // TODO add your handling code here:
-        lbQuenMK.setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_lbQuenMKMouseMoved
 
     /**
      * @param args the command line arguments
@@ -231,19 +201,17 @@ public class Signin extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-
-                    Signin signin = new Signin();
-                    signin.setVisible(true);
-                    if (!list.loadFile()) {
-                        new Signup(1).setVisible(true);
-                        signin.dispose();
-                    }
-                } catch (Exception ex) {
-                    Logger.getLogger(Signin.class.getName()).log(Level.SEVERE, null, ex);
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                
+                Signin signin = new Signin();
+                signin.setVisible(true);
+                if (!list.loadFile()) {
+                   new Signup().setVisible(true);
+                   signin.dispose();
                 }
+            } catch (Exception ex) {
+                Logger.getLogger(Signin.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
     }
@@ -255,7 +223,6 @@ public class Signin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lbQuenMK;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables

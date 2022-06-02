@@ -55,19 +55,19 @@ public class Car implements Serializable{
         this.year = year;
     }
 
-    public int getNumber() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setNumber(int amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
-    public double getPrice() {
+    public double getCost() {
         return cost;
     }
 
-    public void setPrice(double cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
@@ -76,4 +76,3 @@ public class Car implements Serializable{
         return "Car{" + "id=" + id + ", name=" + name + ", brand=" + brand + ", year=" + year + ", amount=" + amount + ", cost=" + cost + '}';
     }
 }
-//check30/5/2022
